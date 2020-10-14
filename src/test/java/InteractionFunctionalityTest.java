@@ -11,7 +11,7 @@ public class InteractionFunctionalityTest {
 
         Example mockedObject = mock.getMockObject();
 
-        assertEquals(0,MyMockingLibrary.classInterActionCount(mockedObject));
+        assertEquals(0,MyMockingLibrary.classInteractionCount(mockedObject));
     }
 
     @Test
@@ -26,8 +26,8 @@ public class InteractionFunctionalityTest {
         // interacting just with Example class
         mockedObject.ExampleMethod();
 
-        assertEquals(1,MyMockingLibrary.classInterActionCount(mockedObject));
-        assertEquals(0,MyMockingLibrary.classInterActionCount(mockedObject2));
+        assertEquals(1,MyMockingLibrary.classInteractionCount(mockedObject));
+        assertEquals(0,MyMockingLibrary.classInteractionCount(mockedObject2));
     }
 
     @Test
@@ -44,7 +44,7 @@ public class InteractionFunctionalityTest {
             mockedObject.ExampleMethod();
         }
 
-        assertEquals(random,MyMockingLibrary.classInterActionCount(mockedObject));
+        assertEquals(random,MyMockingLibrary.classInteractionCount(mockedObject));
     }
 
     @Test
@@ -54,7 +54,7 @@ public class InteractionFunctionalityTest {
 
         Example mockedObject = mock.getMockObject();
 
-        assertEquals(0,MyMockingLibrary.classInterActionCount(mockedObject, "ExampleMethod", int.class));
+        assertEquals(0,MyMockingLibrary.methodInteractionCount(mockedObject, "ExampleMethod", int.class));
     }
 
     @Test
@@ -67,7 +67,7 @@ public class InteractionFunctionalityTest {
         mockedObject.ExampleMethod();
         mockedObject.ExampleMethod(1);
 
-        assertEquals(1,MyMockingLibrary.classInterActionCount(mockedObject, "ExampleMethod", int.class));
+        assertEquals(1,MyMockingLibrary.methodInteractionCount(mockedObject, "ExampleMethod", int.class));
     }
 
     @Test
@@ -84,7 +84,7 @@ public class InteractionFunctionalityTest {
             mockedObject.ExampleMethod(1);
         }
 
-        assertEquals(random,MyMockingLibrary.classInterActionCount(mockedObject, "ExampleMethod", int.class));
+        assertEquals(random,MyMockingLibrary.methodInteractionCount(mockedObject, "ExampleMethod", int.class));
     }
 
 }

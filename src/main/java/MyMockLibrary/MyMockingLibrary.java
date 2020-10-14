@@ -20,14 +20,14 @@ public class MyMockingLibrary<TMockable> {
         this.tMockableClass = tMockableClass;
     }
 
-    public static <TMockable> int classInterActionCount(TMockable mockedObject) {
+    public static <TMockable> int classInteractionCount(TMockable mockedObject) {
         if(_mockedClassInteractionCounter.containsKey(mockedObject.getClass().getName())){
             return _mockedClassInteractionCounter.get(mockedObject.getClass().getName());
         }
         return 0;
     }
 
-    public static <TMockable> int classInterActionCount(TMockable mockedObject, String exampleMethod, Class... parameters) {
+    public static <TMockable> int methodInteractionCount(TMockable mockedObject, String exampleMethod, Class... parameters) {
         if(_mockedClassInteractionCounter.containsKey(mockedObject.getClass().getName())){
             StringBuilder parameterNames = new StringBuilder();
             for (Class parameter : parameters) {

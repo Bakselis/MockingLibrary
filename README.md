@@ -3,8 +3,8 @@
 ### Overview
 
 This mocking library is personal project with my take on how mocking library could work. 
-It creates a mocked object during the rune time that extends or implements given object with 
-all its methods and can provide useful insights on how many times class or method was used. 
+It creates a mocked object (during the runetime) that extends or implements given object with 
+all its methods. Library also can provide useful insights on how many times mocked class or method was used. 
 
 ### Usage
 
@@ -26,8 +26,6 @@ IExample mockedObject = mock.getMockObject();
 ```
 
 ### Additional functionality
-
-Library provides some extra functionality as well
 
 #### Retrieving the count of interactions for mocked classes
 

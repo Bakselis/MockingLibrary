@@ -17,6 +17,10 @@ MyMockingLibrary<IExample> mock = new MyMockingLibrary(IExample.class);
 To mock a method you can call 'mock' method with the name and return value as an arguments
 ```
 mock.mock("ExampleMethodName", "valueToReturn");
+
+// If method takes parameters you should include  them at the end 
+mock.mock("ExampleMethodName", "valueToReturn", int.class, String.class);
+
 ```
 
 To retrieve mocked object you should call getMockObject method

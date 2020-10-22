@@ -46,12 +46,12 @@ To retrieve the count of interactions you should call static method methodInterA
 parameters:
 
 ```
-MyMockingLibrary.methodInterActionCount(mockedObject, "ExampleMethodName", ExampleMethodParameters...)'
+MyMockingLibrary.methodInteractionCount(mockedObject, "ExampleMethodName", ExampleMethodParameters...)'
 ```
 
 Example
 ```
-MyMockingLibrary.methodInterActionCount(mockedObject, "ExampleMethodName", int.class, String.class)'
+MyMockingLibrary.methodInteractionCount(mockedObject, "ExampleMethodName", int.class, String.class)'
 ```
 
 

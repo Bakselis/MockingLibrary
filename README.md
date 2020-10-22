@@ -18,7 +18,7 @@ To mock a method you can call 'mock' method with the name and return value as an
 ```
 mock.mock("ExampleMethodName", "valueToReturn");
 
-// If method takes parameters you should include  them at the end 
+// If method takes parameters you should include them at the end 
 mock.mock("ExampleMethodName", "valueToReturn", int.class, String.class);
 
 ```
